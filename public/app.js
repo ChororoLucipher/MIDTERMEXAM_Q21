@@ -21,16 +21,13 @@ const API_URL = "/api/products";
       table.replaceChildren();
 
       try {
-        //const response = await fetch(API_URL);
-        const row = table.insertRow();
-        const cell = row.insertCell();
-        cell.colSpan = 3;
-        cell.textContent = "error.message";
-        /**
+        const response = await fetch(API_URL);
+      
+        
         if (!response.ok) {
           throw new Error("Failed to load products.");
         }
-        */
+    
 
         //const products = await response.json();
         /**
@@ -105,4 +102,4 @@ const API_URL = "/api/products";
       }
     });
 
-    //loadProducts();
+    loadProducts();
