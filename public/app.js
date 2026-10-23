@@ -18,6 +18,7 @@ const API_URL = "/api/products";
     }
 
     async function loadProducts() {
+        message.textContent = "text";
         /**
       table.replaceChildren();
 
