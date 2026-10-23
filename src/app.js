@@ -8,8 +8,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Serve the styled frontend (public/index.html + CSS)
-app.use(express.static(path.join(__dirname,'..', 'public')));
+// Serve the frontend locally (Vercel serves public/ automatically in production)
+if (process.env.NODE_ENV !== 'production') {
+  app.use(express.static(path.join(__dirname, '..', 'public')));
+}
+
 
 // Hardcoded product data
 const products = [
