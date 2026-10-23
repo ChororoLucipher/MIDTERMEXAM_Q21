@@ -8,9 +8,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'Server is running smoothly' });
+});
 // Serve the frontend locally (Vercel serves public/ automatically in production)
+if (process.env.NODE_ENV !== 'production') {
   app.use(express.static(path.join(__dirname, '..', 'public')));
-
+}
 
 // Hardcoded product data
 const products = [
