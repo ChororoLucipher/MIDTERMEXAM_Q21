@@ -3,6 +3,7 @@ const API_URL = "/api/products";
     const form = document.getElementById("productForm");
     const table = document.getElementById("productTable");
     const message = document.getElementById("message");
+    const loadingMsg = document.getElementById("load");
     const submitButton = document.getElementById("submitButton");
 
     function showMessage(text, type) {
@@ -19,6 +20,7 @@ const API_URL = "/api/products";
 
     async function loadProducts() {
         message.textContent = "text";
+        loadingMsg.innerHTML = "Hello"
         /**
       table.replaceChildren();
 
@@ -48,13 +50,14 @@ const API_URL = "/api/products";
               cell.textContent = value;
             });
         });
-        */
+        
       } catch (error) {
         const row = table.insertRow();
         const cell = row.insertCell();
         cell.colSpan = 3;
         cell.textContent = error.message;
       }
+       */
     }
 
     form.addEventListener("submit", async event => {
