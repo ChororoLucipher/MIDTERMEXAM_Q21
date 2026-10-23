@@ -32,7 +32,7 @@ const API_URL = "/api/products";
         }
         */
 
-        const products = await response.json();
+        //const products = await response.json();
         /**
         if (!products.length) {
           const row = table.insertRow();
