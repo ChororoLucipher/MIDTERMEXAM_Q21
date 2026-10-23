@@ -21,7 +21,7 @@ const API_URL = "/api/products";
       table.replaceChildren();
 
       try {
-        const response = await fetch(API_URL);
+        //const response = await fetch(API_URL);
         const row = table.insertRow();
         const cell = row.insertCell();
         cell.colSpan = 3;
