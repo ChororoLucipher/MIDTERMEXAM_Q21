@@ -105,4 +105,4 @@ const API_URL = "/api/products";
       }
     });
 
-    loadProducts();
+    //loadProducts();
