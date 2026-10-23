@@ -19,9 +19,9 @@ const API_URL = "/api/products";
     }
 
     async function loadProducts() {
-        message.textContent = "text";
-        loadingMsg.innerHTML = "Hello"
-        /**
+        //message.textContent = "text";
+        //loadingMsg.innerHTML = "Hello"
+        
       table.replaceChildren();
 
       try {
@@ -57,7 +57,7 @@ const API_URL = "/api/products";
         cell.colSpan = 3;
         cell.textContent = error.message;
       }
-       */
+      
     }
 
     form.addEventListener("submit", async event => {
