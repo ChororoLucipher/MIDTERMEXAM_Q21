@@ -22,10 +22,11 @@ const API_URL = "/api/products";
 
       try {
         const response = await fetch(API_URL);
-
+        /**
         if (!response.ok) {
           throw new Error("Failed to load products.");
         }
+        */
 
         const products = await response.json();
 
